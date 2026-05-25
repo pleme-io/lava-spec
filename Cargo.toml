@@ -1,0 +1,21 @@
+[package]
+authors = ["pleme-io"]
+description = "lava-spec — typed substrate meta-spec per ★★ CATALOG REFLECTION. Captures every authored primitive in the lava + tatara-lisp ecosystem (PrimitiveKind × Maturity × dependency-edges) as typed data. Tools iterate the catalog mechanically: `lava ls --detail`, drift detectors, dependency-graph viz, M-phase planners all consume this one source of truth."
+edition = "2024"
+license = "MIT"
+name = "lava-spec"
+readme = "README.md"
+repository = "https://github.com/pleme-io/lava-spec"
+version = "0.1.0"
+
+[lib]
+name = "lava_spec"
+path = "src/lib.rs"
+
+[lints.clippy]
+pedantic = "warn"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
